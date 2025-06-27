@@ -1,0 +1,8 @@
+import qrcode
+msg = "KAMI SAMA TSKEHTE"
+r=qrcode.QRCode()
+r.add_data(msg)
+r.make(fit=True)
+a=r.make_image(fill_color="red",back_color="white")
+a.save("combo.png")
+print("img is correct")
