@@ -1,1 +1,31 @@
+class emp:
+    Company="Tcs"
+    profit=600000
+    tax_percentage=10
+    def __init__(self,name,salary,share_percentage):
+        self.name=name
+        self.salary=salary
+        self.share_percentage = share_percentage
+        self.tax=10
+        self.share=0
+    def cal_tax(self):
+        self.tax=(self.salary * emp.tax_percentage*0.01)
+    def cal_share(self):
+        self.share=(emp.profit * self.share_percentage*0.01)
+    def display(self):
+        self.cal_tax()
+        self.cal_share()
+        print("Name:",self.name)
+        print("Salary:",self.salary)
+        print("company:",emp.Company)
+        print("tax to pay:",self.tax)
+        print("share from company:",self.share)
+        
+
+e1=emp("QWER",200000,11)
+e2=emp("REWS",40000,14)
+e3=emp("QWEDXZ",45000,13)
+e1.display()
+e2.display()
+e3.display()
 
